@@ -81,12 +81,24 @@ Prompt 'Creating sequences for Employee_id and Department_id
 
 -- DROP sequence DEPTSEQ;
 
-CREATE SEQUENCE  "PDBADMIN"."DEPTSEQ"  MINVALUE 1 MAXVALUE 999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
-
+CREATE SEQUENCE  "DEPTSEQ"  MINVALUE 1 MAXVALUE 999999 INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 
 -- DROP sequence empseq;
 
-CREATE SEQUENCE  "PDBADMIN"."EMPSEQ"  MINVALUE 90001 MAXVALUE 9999999 INCREMENT BY 1 START WITH 90001 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
-truncate table employees;
+CREATE SEQUENCE  "EMPSEQ"  MINVALUE 90001 MAXVALUE 9999999 INCREMENT BY 1 START WITH 90001 CACHE 20 NOORDER  NOCYCLE  NOKEEP  NOSCALE  GLOBAL ;
 
 Prompt 'Sequences Created
+
+
+-- Create the package specification
+
+Prompt 'Creating package specification pkg_employee_api
+
+@pkg_employee_api.pls
+
+Prompt 'package specification pkg_employee_api created 
+
+Prompt 'Creating package body pkg_employee_api 
+@pkg_employee_api.plb
+
+Prompt 'package body pkg_employee_api created 
