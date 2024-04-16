@@ -12,3 +12,8 @@ and Employees.
 
 For details of requirement, please refer to Oracle_Coding_ChallengeLDMS.pdf
 
+**Intrction Manual**
+
+Please follow instruction Manual.docx 
+
+
